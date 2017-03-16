@@ -39,7 +39,7 @@ public class RCDuniyaTest {
 		webDriver.get(testUrl);
 
 		WebElement emailElement = webDriver.findElement(By.name("email"));
-		Thread.sleep(2000);
+		
 		emailElement.sendKeys("test@gmail.com");
 		
 		WebElement passwordElement = webDriver.findElement(By.name("password"));
