@@ -45,7 +45,7 @@ public class RCDuniyaTest {
 		
 		WebElement passwordElement = webDriver.findElement(By.name("password"));
 		passwordElement.sendKeys("pass");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		WebElement submitButtonElement = webDriver.findElement(By.xpath("//button/@type='submit'"));
 		Thread.sleep(3000);
 		submitButtonElement.click();
