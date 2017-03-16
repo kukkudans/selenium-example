@@ -26,6 +26,7 @@ public class RCDuniyaTest {
 		webDriver = new ChromeDriver();
 		// maximize window
 		// driver.manage().window().maximize();
+	
 	}
 
 	@Test
@@ -44,9 +45,9 @@ public class RCDuniyaTest {
 		
 		WebElement passwordElement = webDriver.findElement(By.name("password"));
 		passwordElement.sendKeys("pass");
-		
+		Thread.sleep(3000);
 		WebElement submitButtonElement = webDriver.findElement(By.xpath("//button/@type='submit'"));
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		submitButtonElement.click();
 		Thread.sleep(50000);
 	}
