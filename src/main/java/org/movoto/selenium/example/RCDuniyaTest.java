@@ -43,7 +43,6 @@ public class RCDuniyaTest {
 		emailElement.sendKeys("test@gmail.com");
 		
 		WebElement passwordElement = webDriver.findElement(By.name("password"));
-		Thread.sleep(2000);
 		passwordElement.sendKeys("pass");
 		
 		WebElement submitButtonElement = webDriver.findElement(By.xpath("//button/@type='submit'"));
