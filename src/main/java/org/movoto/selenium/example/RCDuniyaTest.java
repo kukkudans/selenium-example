@@ -10,10 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Test1 {
+public class RCDuniyaTest {
 
 	private String testUrl;
-	private WebDriver driver;
+	private WebDriver webDriver;
 
 	@Before
 	public void init() {
@@ -23,7 +23,7 @@ public class Test1 {
 		// Create a new instance of the Chrome driver
 		// Notice that the remainder of the code relies on the interface,
 		// not the implementation.
-		driver = new ChromeDriver();
+		webDriver = new ChromeDriver();
 		// maximize window
 		// driver.manage().window().maximize();
 	}
@@ -36,17 +36,17 @@ public class Test1 {
 		// And now use this to visit myBlog
 		// Alternatively the same thing can be done like this
 		// driver.navigate().to(testUrl);
-		driver.get(testUrl);
+		webDriver.get(testUrl);
 
-		WebElement emailElement = driver.findElement(By.name("email"));
+		WebElement emailElement = webDriver.findElement(By.name("email"));
 		Thread.sleep(2000);
 		emailElement.sendKeys("test@gmail.com");
 		
-		WebElement passwordElement = driver.findElement(By.name("password"));
+		WebElement passwordElement = webDriver.findElement(By.name("password"));
 		Thread.sleep(2000);
 		passwordElement.sendKeys("pass");
 		
-		WebElement submitButtonElement = driver.findElement(By.xpath("//button/@type='submit'"));
+		WebElement submitButtonElement = webDriver.findElement(By.xpath("//button/@type='submit'"));
 		Thread.sleep(2000);
 		submitButtonElement.click();
 		Thread.sleep(50000);
@@ -56,6 +56,6 @@ public class Test1 {
 
 	@After
 	public void teardown() throws IOException {
-		driver.quit();
+		webDriver.quit();
 	}
 }
